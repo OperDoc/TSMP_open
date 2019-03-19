@@ -19,21 +19,41 @@ var for_res;
 var k = 2.5;
 var t_start;
 var dt;
+
+function click1(){
+
+}
+
+function click2(){
+    
+}
+
+function click3(){
+    
+}
+
 function setup() {
     dt = new Date();
     t_start = dt.getTime();
-    result_button = createButton("start");
+    result_button = createButton("reset");
     result_button.position(570, 500);
     result_button.size(200 * k, 40 * k);
+    result_button.style("font-size:50px");
     button1 = createButton("Случайные изменения");
     button1.position(375,10);
     button1.size(100 * k, 50 * k);
+    button1.style("font-size:35px");
     button2 = createButton("Полный перебор");
     button2.position(375 + 125 * k,10);
     button2.size(100 * k, 50 * k);
+    button2.style("font-size:35px");
     button3 = createButton("Генетический алгоритм");
     button3.position(375 + 250 * k, 10);
     button3.size(100 * k, 50 * k);
+    button3.style("font-size:35px");
+    button1.mousePressed(click1);
+    button2.mousePressed(click2);
+    button3.mousePressed(click3);
     canv = createCanvas(window.innerWidth - 20, window.innerHeight - 20);
     for(var i = 0; i < totalCities; i++){
         cities.push(createVector(random(5, _width - 5), random(5, _height - 5)));
