@@ -128,7 +128,7 @@ function pick(arr, fit){
     return arr[i].slice();
 }
 
-function coross(ordA, ordB){
+function cross(ordA, ordB){
     var st = floor(random(ordA.length));
     var nd = floor(st + 1, random(ordA.length));
     var res = ordA.slice(st, nd);
@@ -168,7 +168,24 @@ function next (dots, arr, count) {
     } else if(count == 1) {
         return _next(arr);
     } else if(count == 2) {
-        fit = getFit(dots, arr);
+        fit = getfit(dots, arr);
         return nextG(arr, fit);
+    }
+}
+
+function fact(n) {
+    if(n < 1) return 1;
+    return n * fact(n - 1);
+}
+
+function next_ver(p, algCount) {
+    if(algCount == 0) {
+
+    } 
+    if(algCount == 1) {
+
+    }
+    if(algCount == 2) {
+
     }
 }
